@@ -108,7 +108,7 @@ async function news(query) {
           )}&category=news&format=json`;
           const searXNGResponse = await fetch(searXNGUrl);
             const searXNGData = await searXNGResponse.json();
-            results = searXNGData.results.slice(0, MAX_RESULTS).map((item) => ({
+            results = searXNGData.results.slice(0, process.env.MAX_RESULTS).map((item) => ({
               title: item.title,
               link: item.url,
               snippet: item.content
