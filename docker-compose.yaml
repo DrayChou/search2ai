@@ -1,6 +1,8 @@
 # version: "3.8"
 
 services:
+  # docker run -d --name search2ai -v "$(pwd)":/app -w /app -p 3014:3014 node:18-alpine sh -c "npm install && npm start"
+  # docker run -d --name search2ai --network compse -v "$(pwd)":/app -w /app -e PORT=7860 node:18-alpine sh -c "npm install && npm start"
   search2ai:
     image: node:18-alpine
     container_name: search2ai
